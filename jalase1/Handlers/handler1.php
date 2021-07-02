@@ -1,14 +1,3 @@
-<?php
-error_reporting(E_ALL);
-ini_set("display_errors","On");
-
-require_once("Route.php");
-
-$route= new Route();
-$route->checkRoute( $_SERVER['REQUEST_URI']);
-
-
-?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -19,8 +8,6 @@ $route->checkRoute( $_SERVER['REQUEST_URI']);
     <title>Document</title>
 </head>
 <body>
-
+<div style="color:green ; margin:  auto; text-align: center">  success </div>
 </body>
 </html>
-
-
