@@ -4,6 +4,9 @@ declare(strict_types=1);
 
 namespace App;
 
+use App\Service\CalculateServiceFactory;
+use App\Service\CalculatorService;
+
 /**
  * The configuration provider for the App module
  *
@@ -21,7 +24,7 @@ class ConfigProvider
     {
         return [
             'dependencies' => $this->getDependencies(),
-            'templates'    => $this->getTemplates(),
+            'templates' => $this->getTemplates(),
         ];
     }
 
@@ -34,8 +37,9 @@ class ConfigProvider
             'invokables' => [
                 Handler\PingHandler::class => Handler\PingHandler::class,
             ],
-            'factories'  => [
+            'factories' => [
                 Handler\HomePageHandler::class => Handler\HomePageHandlerFactory::class,
+                CalculatorService::class => CalculateServiceFactory::class,
             ],
         ];
     }
@@ -47,8 +51,8 @@ class ConfigProvider
     {
         return [
             'paths' => [
-                'app'    => [__DIR__ . '/../templates/app'],
-                'error'  => [__DIR__ . '/../templates/error'],
+                'app' => [__DIR__ . '/../templates/app'],
+                'error' => [__DIR__ . '/../templates/error'],
                 'layout' => [__DIR__ . '/../templates/layout'],
             ],
         ];
