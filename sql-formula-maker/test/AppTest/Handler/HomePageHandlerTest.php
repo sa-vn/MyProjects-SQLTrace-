@@ -19,7 +19,7 @@ use Psr\Http\Message\ServerRequestInterface;
 use function get_class;
 
 class HomePageHandlerTest extends TestCase
-{
+{"hhh"
     use ProphecyTrait;
 
     /** @var ContainerInterface|ObjectProphecy */
